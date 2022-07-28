@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "roboto";
+}
+.title {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 61px;
+  margin: 0;
+  padding: 0 30px 21px 0;
+}
+.container {
+  margin: 40px 30px 25px 30px;
+}
+ul {
+  padding: 0;
+}
+.label,
+.form {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 960px) {
+  .label {
+    width: -webkit-fill-available;
+    margin-right: 30px;
+  }
+}
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 960px) {
+  .lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 10px;
+  }
+  .form {
+    flex-direction: inherit;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+.input-tasks {
+  height: 55px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  padding: 10px;
+}
+.boton {
+  height: 55px;
+  background-color: #9cbbe9;
+  font-size: 22px;
+  margin-top: 10px;
+  border: none;
+}
+@media (min-width: 960px) {
+  .boton {
+    width: 600px;
+  }
+}
