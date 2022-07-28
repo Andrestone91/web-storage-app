@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html --dist-dir build",
+    "build": "parcel build ./src/index.html --dist-dir build --public-url /web-storage-app",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {

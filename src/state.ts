@@ -1,6 +1,6 @@
 const state ={
     data:{
-        tasks:[]    
+        tasks:[{id:1,title:"nota",completed:false,deleted:false}]    
     },
     listeners:[],
     init(){
