@@ -1,12 +1,17 @@
 const state ={
     data:{
-        tasks:[{id:1,title:"nota",completed:false,deleted:false}]    
+        tasks:[]    
     },
     listeners:[],
-    init(){
-        const data:any = localStorage.getItem("saved-state")
-        const list = this.setState(JSON.parse(data))
-    },
+    
+   init(){
+      const data:any = localStorage.getItem("saved-state")
+    if (!data) {
+    return console.log("bienvenidos a una list de trabajos pendientes que hice utilizando un localStorage");
+    
+  }
+  this.setState(JSON.parse(data))
+   },
     getState(){
         return this.data
     },
@@ -21,7 +26,7 @@ const state ={
         for (const cb of this.listeners) {
             cb(newState)
         }  
-       localStorage.setItem("saved-state",JSON.stringify(newState))
+      localStorage.setItem("saved-state",JSON.stringify(newState))
         console.log("he cambiado", this.data);
     },
     subscribe(callback:(any)=>any){

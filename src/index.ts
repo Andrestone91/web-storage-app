@@ -6,7 +6,7 @@ import { initHomePage } from "./pages/homePage";
 import { state } from "./state";
 
 function main(){
-    state.init()
+  state.init()
     initHeader()
     initInbox()
     initText()
